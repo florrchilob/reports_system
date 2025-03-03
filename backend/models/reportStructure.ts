@@ -5,7 +5,7 @@ interface IReportstructure {
     _id: string,
     staffID: string,
     attributeName: string,
-    attributeType: any,
+    attributeType: string | number | Date | boolean,
     required: boolean,
     unique: boolean,
 }
@@ -13,7 +13,7 @@ interface IReportstructure {
 const reportStructureSchema = new mongoose.Schema<IReportstructure>({
     staffID: { type: String, required: true },
     attributeName: { type: String, required: true },
-    attributeType: { type: String, required: true },
+    attributeType: { type: mongoose.Schema.Types.Mixed, required: true },
     required: { type: Boolean, required: true },
     unique: { type: Boolean, required: true },
 });
