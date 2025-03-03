@@ -75,16 +75,16 @@ Each **Team Manager (Type 2)** defines the report structure at the time of team 
 
 ## 📌 API Endpoints (Backend)
 
-| Method | Endpoint                | Description                               | Access |
-|--------|-------------------------|-------------------------------------------|--------|
-| **POST**  | `/auth/google`           | Google OAuth authentication (Future)     | Public |
-| **GET**   | `/reports`               | Get reports based on user type           | Type 1+ |
-| **POST**  | `/reports`               | Create a new report                      | Type 1, Type 2 |
-| **PUT**   | `/reports/:id`           | Edit a report                            | Type 1 (own) / Type 2 (team) |
-| **DELETE**| `/reports/:id`           | Delete a report                          | Type 1 (own) / Type 2 (team) |
-| **PUT**   | `/teams/:id/members`     | Modify team composition                  | System Admin |
-| **POST**  | `/teams`                 | Create a new team                        | System Admin |
-| **POST**  | `/users`                 | Assign users to teams                    | System Admin |
+| Method    | Endpoint                 | Description                              | Access                                          |
+|-----------|--------------------------|------------------------------------------|-------------------------------------------------|
+| **POST**  | `/auth/google`           | Google OAuth authentication (Future)     | Public                                          |
+| **GET**   | `/reports`               | Get reports based on user type           | Type 1 (own), Type 2 (own team), Type 3 (teams) |
+| **POST**  | `/reports`               | Create a new report                      | Type 1, Type 2                                  |
+| **PUT**   | `/reports/:id`           | Edit a report                            | Type 1 (own) / Type 2 (team)                    |
+| **DELETE**| `/reports/:id`           | Delete a report                          | Type 1 (own) / Type 2 (team)                    |
+| **PUT**   | `/teams/:id/members`     | Modify team composition                  | System Admin                                    |
+| **POST**  | `/teams`                 | Create a new team                        | System Admin                                    |
+| **POST**  | `/users`                 | Assign users to teams                    | System Admin                                    |
 
 ---
 
