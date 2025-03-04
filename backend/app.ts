@@ -1,5 +1,5 @@
 import express from "express"
-import connectDB from "./config/connectDB"
+import connectDB from "./infrastructure/database/connectDB"
 import dotenv from "dotenv"
 
 dotenv.config()
