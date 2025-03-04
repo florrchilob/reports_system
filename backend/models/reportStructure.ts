@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 interface IReportstructure {    
     _id: string,
-    staffID: string,
+    teamID: string,
     attributeName: string,
     attributeType: string | number | Date | boolean,
     required: boolean,
@@ -11,7 +11,7 @@ interface IReportstructure {
 }
 
 const reportStructureSchema = new mongoose.Schema<IReportstructure>({
-    staffID: { type: String, required: true },
+    teamID: { type: String, required: true },
     attributeName: { type: String, required: true },
     attributeType: { type: mongoose.Schema.Types.Mixed, required: true },
     required: { type: Boolean, required: true },

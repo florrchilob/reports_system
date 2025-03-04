@@ -11,17 +11,19 @@ enum UserType {
 interface IUser {
     mail: string,
     _id: string,
-    staffID: string,
+    teamID: string,
     userType: UserType,
     personalID: number,
+    JWT: string
 }
 
 const userSchema = new Schema<IUser>(
     {
-    mail: { type: String, required: true, unique: true },
-    staffID: { type: String, required: true },
-    userType: { type: Number, required: true },
-    personalID: { type: Number, required: true, unique: true }
+        mail: { type: String, required: true, unique: true },
+        teamID: { type: String, required: true },
+        userType: { type: Number, required: true },
+        personalID: { type: Number, required: true, unique: true },
+        JWT: { type: String, unique: true }
     },
     {
         versionKey: false,

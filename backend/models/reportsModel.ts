@@ -2,12 +2,12 @@ import mongoose from "mongoose";
 
 interface IReport {
     _id: string,
-    staffID: string,
+    teamID: string,
     createdAt: Date
 }
 
 const reportSchema = new mongoose.Schema<IReport>({
-    staffID: { type: String, required: true },
+    teamID: { type: String, required: true },
     createdAt: { type: Date, required: true, validate: [(val: Date) => val <= new Date(), 'Date cannot be in the future'] }
 });
 
